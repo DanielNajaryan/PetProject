@@ -9,25 +9,28 @@ public class ImpMatrix {
     Scanner scanner= new Scanner(System .in);
     //   x-y et matricai chapna lenght and weight
     public double[][] matrixint() {
-        System.out.print("gri matricai ergarutyuny");
+        System.out.print("input matrix's lenght (gri matricai ergarutyuny)");
         x = scanner.nextInt();
-         arr = new double[x][x + 1];
-        System.out.println("gri masivi tvery");
+        if (x < 1) {
+            System.out.println("matrix's length never can be less or equal to 1");
+        } else {
+            arr = new double[x][x + 1];
+            System.out.println("input your matrix(gri masivi tvery)");
 
-        for (int i = 0; i < x; i++) {
-            for (int k = 0; k < x + 1; k++) {
-                arr[i][k] = scanner.nextInt();
+            for (int i = 0; i < x; i++) {
+                for (int k = 0; k < x + 1; k++) {
+                    arr[i][k] = scanner.nextDouble();
+                }
             }
-        }
-        System.out.println("matrix");
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < x + 1; j++) {
-                System.out.print(arr[i][j] + " ");
+            System.out.println("matrix");
+            for (int i = 0; i < x; i++) {
+                for (int j = 0; j < x + 1; j++) {
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
             }
             System.out.println();
-
         }
-        System.out.println("");
         return arr;
     }
     public void setMaxgcivra(){
@@ -40,6 +43,7 @@ public class ImpMatrix {
                 }
             }
             maxgcivra[i] = max;
+
         }
     }
 

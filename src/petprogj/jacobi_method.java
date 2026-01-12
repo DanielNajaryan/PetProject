@@ -16,7 +16,6 @@ public class jacobi_method {
         this.matricai_qanak = matrix.length;
     }
     public void askforsteps() {
-
         System.out.print("Cuyc tal bolor priblijeniyanery? gri 1 ete yes |2 yete no/false");
         ans = sc.nextInt();
 
@@ -38,10 +37,13 @@ public class jacobi_method {
                         gummarum -= a[x][y] * x1[y];
                     }
                 }
+                if (a[x][x] == 0) {
+                    System.out.println("The zero element on the main diagonal");;
+                }
                 x2[x] = gummarum / a[x][x];
             }
             if (showSteps) {
-                System.out.print("Iteracia " + (u + 1) + ": ");
+                System.out.print("Iteration " + (u + 1) + ": ");
                 for (int i = 0; i < x2.length; i++) {
                     System.out.print("x" + (i + 1) + "=" + x2[i] + "  ");
                 }
