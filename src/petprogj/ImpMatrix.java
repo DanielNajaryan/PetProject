@@ -1,5 +1,7 @@
 package petprogj;
-
+import com.google.gson.Gson;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ImpMatrix {
@@ -9,14 +11,13 @@ public class ImpMatrix {
     Scanner scanner= new Scanner(System .in);
     //   x-y et matricai chapna lenght and weight
     public double[][] matrixint() {
-        System.out.print("input matrix's lenght (gri matricai ergarutyuny)");
+        System.out.print("gri matricai ergarutyuny");
         x = scanner.nextInt();
         if (x < 1) {
             System.out.println("matrix's length never can be less or equal to 1");
         } else {
             arr = new double[x][x + 1];
-            System.out.println("input your matrix(gri masivi tvery)");
-
+            System.out.println("gri masivi tvery");
             for (int i = 0; i < x; i++) {
                 for (int k = 0; k < x + 1; k++) {
                     arr[i][k] = scanner.nextDouble();
