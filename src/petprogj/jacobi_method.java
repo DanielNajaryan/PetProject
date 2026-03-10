@@ -17,7 +17,7 @@ public class jacobi_method {
     }
     public void askforsteps() {
         while (true) {
-            System.out.print("Cuyc tal cjgryutyun@ ? greq 1 ete yes | 2 ete no/false: ");
+            System.out.print("Ցույց տալ ճշգրտությունը" + "? գրեք 1 եթե այո | 2 եթե ոչ/false: ");
             if (!sc.hasNextInt()) {
                 System.out.println("Please input 1 or 2");
                 sc.next();
@@ -37,7 +37,7 @@ public class jacobi_method {
         }
     }
     public double[] getvalues() {
-        System.out.println("greq xndrumem motecman csgrtutyan motavor qnaky sovorabar 4-7");
+        System.out.println("Գրեք մոտեցման ճշգրտության մոտավոր քանակը սովորաբար 4-7");
         priblijenyaneriqanaky= sc.nextInt();
         double[] x1 = new double[matricai_qanak];
         double[] x2 = new double[matricai_qanak];

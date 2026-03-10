@@ -12,7 +12,7 @@ public class ImpMatrix {
     //   x-y et matricai chapna lenght and weight
     public double[][] matrixint() {
         while (true) {
-            System.out.print("gri matricai erkarutyuny: ");
+            System.out.print("Գրեք մատրիցի երկարությունը: ");
             if (!scanner.hasNextInt()) {
                 System.out.println("Please enter a number!");
                 scanner.next();
@@ -26,7 +26,7 @@ public class ImpMatrix {
             break;
         }
         arr = new double[x][x + 1];
-        System.out.println("greq matrica-i mej eexac tvery");
+        System.out.println("Գրեք մատրիցի մեջ եղած թվերը, յուրաքնչյուր թվի ներմուծումից հետո սեղմեք enter");
         for (int i = 0; i < x; i++) {
             for (int k = 0; k < x + 1; k++) {
                 while (!scanner.hasNextDouble()) {
