@@ -11,7 +11,7 @@ public class MatrixJson {
         int size;
         double[][] matrix;
     }
-    public static List<double[][]> readFromJson(String path) {
+    public static List<double[][]> readFromJson(String path ) {
         try (FileReader reader = new FileReader(path)) {
             Gson gson = new Gson();
             MatrixJson data = gson.fromJson(reader, MatrixJson.class);

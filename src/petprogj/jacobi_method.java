@@ -16,13 +16,28 @@ public class jacobi_method {
         this.matricai_qanak = matrix.length;
     }
     public void askforsteps() {
-        System.out.print("Cuyc tal bolor priblijeniyanery? gri 1 ete yes |2 yete no/false");
-        ans = sc.nextInt();
-
-        showSteps = (ans == 1);
+        while (true) {
+            System.out.print("Ցույց տալ ճշգրտությունը" + "? գրեք 1 եթե այո | 2 եթե ոչ/false: ");
+            if (!sc.hasNextInt()) {
+                System.out.println("Please input 1 or 2");
+                sc.next();
+                continue;
+            }
+            ans = sc.nextInt();
+            if (ans == 1 || ans == 2) {
+                if (ans == 1) {
+                    showSteps = true;
+                } else {
+                    showSteps = false;
+                }
+                break;
+            } else {
+                System.out.println("Input must be 1 or 2");
+            }
+        }
     }
     public double[] getvalues() {
-        System.out.println("gri priblijenyaneri motavor qnaky");
+        System.out.println("Գրեք մոտեցման ճշգրտության մոտավոր քանակը սովորաբար 4-7");
         priblijenyaneriqanaky= sc.nextInt();
         double[] x1 = new double[matricai_qanak];
         double[] x2 = new double[matricai_qanak];
@@ -38,7 +53,7 @@ public class jacobi_method {
                     }
                 }
                 if (a[x][x] == 0) {
-                    System.out.println("The zero element on the main diagonal");;
+                    System.out.println(" you have a zero on the main diagonal");;
                 }
                 x2[x] = gummarum / a[x][x];
             }

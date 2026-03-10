@@ -5,40 +5,73 @@ import petprogj.whriteresult;
 import java.util.Scanner;
 import java.util.List;
 import petprogj.MatrixJson;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ImpMatrix imp = new ImpMatrix();
-        System.out.println("welcome to Kimixito-s calculator\n" +
-                "Choose input method:\n" +
-                "1 - Input matrix manually\n" +
-                "2 - Load matrices from JSON file");
-        int inputType = scanner.nextInt();
-        if (inputType == 1) {
-            double[][] arr = imp.matrixint();
-            solveMatrix(arr, scanner);
-        } else if (inputType == 2) {
-            scanner.nextLine();
-            System.out.print("Enter JSON file path: ");
-            String path = scanner.nextLine();
-            List<double[][]> matrices = MatrixJson.readFromJson(path);
-            for (double[][] arr : matrices) {
-                System.out.println("Solving next matrix:");
-                solveMatrix(arr, scanner);
+        int inputType;
+        System.out.println("welcome to Kimixito-s calculator \n");
+        while (true) {
+            System.out.println(
+                    "Choose input method:\n" +
+                            "1 - Input matrix manually\n" +
+                            "2 - Load matrices from JSON file");
+            if (scanner.hasNextInt()) {
+                inputType = scanner.nextInt();
+
+                if (inputType == 1 || inputType == 2) {
+                    break;
+                } else {
+                    System.out.println("Please enter only 1 or 2.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter a number.");
+                scanner.next();
             }
-        } else {
-            System.out.println("Wrong choice");
-            return;
         }
+        double[][] matrix;
+        if (inputType == 1) {
+            matrix = imp.matrixint();
+        } else {
+            List<double[][]> matrices = MatrixJson.readFromJson("matrix.json");
+            matrix = matrices.get(0);
+        }
+        solveMatrix(matrix, scanner);
     }
-    public static void solveMatrix(double[][] arr, Scanner scanner) {
+    public static void solveMatrix ( double[][] arr, Scanner scanner) {
+        int i;
         System.out.println("input 1 if you want decide your extended matrix with\n" +
                 "gaus method else input 2 if you want decide your extended matrix with jacobi method");
-        int i = scanner.nextInt();
-
+        while (true) {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Please input only number 1 or 2");
+                scanner.next();
+                continue;
+            }
+            i = scanner.nextInt();
+            if (i == 1 || i == 2) {
+                break;
+            } else {
+                System.out.println("your input is wrong, input 1 or 2 as stated in instruction ");
+            }
+        }
         System.out.println("and say if u want it to be saved it in some file if yes input 1 if no input 2");
-        int whrinfile = scanner.nextInt();
-
+        int whrinfile;
+        while (true) {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Please input 1 or 2");
+                scanner.next();
+                continue;
+            }
+            whrinfile = scanner.nextInt();
+            if (whrinfile == 1 || whrinfile == 2) {
+                break;
+            } else {
+                System.out.println("Please input only 1 or 2");
+            }
+        }
         if (i == 1) {
             gaus_method solver = new gaus_method();
             solver.setMatrix(arr);
@@ -56,8 +89,7 @@ public class Main {
             if (whrinfile == 1) {
                 whriteresult.writeResultToFile(res);
             }
-        } else {
-            System.out.println("dear user i said 1 or 2");
         }
     }
+
 }
