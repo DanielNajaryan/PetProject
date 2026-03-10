@@ -4,7 +4,7 @@ import java.io.IOException;
 public class whriteresult {
     public static void writeResultToFile(double[] result) {
 
-        try (FileWriter writer = new FileWriter("result.txt")) {
+        try (FileWriter writer = new FileWriter("result.txt ")) {
             for (int i = 0; i < result.length; i++) {
                 writer.write("x" + (i + 1) + " = " + result[i] + "\n");
             }

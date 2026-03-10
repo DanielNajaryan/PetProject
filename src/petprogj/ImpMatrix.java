@@ -26,7 +26,7 @@ public class ImpMatrix {
             break;
         }
         arr = new double[x][x + 1];
-        System.out.println("Գրեք մատրիցի մեջ եղած թվերը, յուրաքնչյուր թվի ներմուծումից հետո սեղմեք enter");
+        System.out.println("Գրեք մատրիցի մեջ եղած թվերը, յուրաքնչյուր թվի ներմուծումից հետո սեղմեք enter ");
         for (int i = 0; i < x; i++) {
             for (int k = 0; k < x + 1; k++) {
                 while (!scanner.hasNextDouble()) {

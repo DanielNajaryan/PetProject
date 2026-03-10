@@ -54,7 +54,7 @@ public class Main {
             if (i == 1 || i == 2) {
                 break;
             } else {
-                System.out.println("your input is wrong, input 1 or 2 as stated in instruction");
+                System.out.println("your input is wrong, input 1 or 2 as stated in instruction ");
             }
         }
         System.out.println("and say if u want it to be saved it in some file if yes input 1 if no input 2");
