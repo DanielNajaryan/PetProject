@@ -12,7 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ImpMatrix imp = new ImpMatrix();
         int inputType;
-        System.out.println("welcome to Kimixito-s calculator\n");
+        System.out.println("welcome to Kimixito-s calculator \n");
         while (true) {
             System.out.println(
                     "Choose input method:\n" +

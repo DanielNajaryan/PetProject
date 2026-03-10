@@ -37,7 +37,7 @@ public class jacobi_method {
         }
     }
     public double[] getvalues() {
-        System.out.println("Գրեք մոտեցման ճշգրտության մոտավոր քանակը սովորաբար 4-7 ");
+        System.out.println("Գրեք մոտեցման ճշգրտության մոտավոր քանակը սովորաբար 4-7");
         priblijenyaneriqanaky= sc.nextInt();
         double[] x1 = new double[matricai_qanak];
         double[] x2 = new double[matricai_qanak];
