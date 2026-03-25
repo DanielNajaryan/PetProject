@@ -1,3 +1,6 @@
+/*
+json ֆայլը ներմուծելու կլասը
+ */
 package petprogj;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,11 +9,16 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 public class MatrixJson {
     List<Matrix> matricaner;
-
+/*
+json ֆայլի մատրիցաների պարամետրերի տեսակավորում
+ */
     public static class Matrix {
         int size;
         double[][] matrix;
     }
+    /*
+    json ֆայլը օգտագործելու և իր միջից դեպի օգտագործվող մեթոդների ուղղարկում
+     */
     public static List<double[][]> readFromJson(String path ) {
         try (FileReader reader = new FileReader(path)) {
             Gson gson = new Gson();

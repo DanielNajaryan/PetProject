@@ -1,6 +1,8 @@
 package petprogj;
 import java.util.Scanner;
-
+/*
+Յակոբի մեթոդի լուծման կլաս
+ */
 public class jacobi_method {
     Scanner sc = new Scanner(System.in);
     private int ans;
@@ -10,11 +12,16 @@ public class jacobi_method {
     private double eps = 1e-6;
     private int priblijenyaneriqanaky;
     private boolean showSteps;
-
+/*
+մատրիցայի ներմուծումը՝ impmatrix-ում, որը վերագրում է main կլասում
+ */
     public void setMatrix(double[][] matrix) {
         this.a = matrix;
         this.matricai_qanak = matrix.length;
     }
+    /*
+    պատասխանի ճշգրտության քայլիների քանակի հարցում
+     */
     public void askforsteps() {
         while (true) {
             System.out.print("Ցույց տալ ճշգրտությունը" + "? գրեք 1 եթե այո | 2 եթե ոչ/false: ");
@@ -36,6 +43,9 @@ public class jacobi_method {
             }
         }
     }
+    /*
+    Յակոբի մեթոդով պատասխանի ստանալու համար կատարված գործողությունները և լոգիկա
+     */
     public double[] getvalues() {
         System.out.println("Գրեք մոտեցման ճշգրտության մոտավոր քանակը սովորաբար 4-7");
         priblijenyaneriqanaky= sc.nextInt();
@@ -81,7 +91,9 @@ public class jacobi_method {
         }
         return true;
     }
-
+/*
+պատասխանի վերադարձ
+ */
     public void etveradardzum(double[] x1) {
         for (x = 0; x < x1.length; x++) {
             System.out.println("x" + (x + 1) + " = " + x1[x]);

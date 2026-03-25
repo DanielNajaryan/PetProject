@@ -4,12 +4,16 @@ public class gaus_method {
     private double[][] a;
     private int matricai_qanak;
     private int y, u, x;
-
+    /*
+    մատրիցայի ներմուծումը՝ impmatrix-ում, որը վերագրում է main կլասում
+     */
     public void setMatrix(double[][] matrix) {
         this.a = matrix;
         this.matricai_qanak = matrix.length;
     }
-
+    /*
+        գաուսի մեթոդով պատասխանի ստանալու համար կատարված գործողությունները և լոգիկա
+         */
     private void hasvark() {
         for (int i = 0; i < matricai_qanak; i++) {
             double pivot = a[i][i];
@@ -36,7 +40,9 @@ public class gaus_method {
         }
         return x1;
     }
-
+    /*
+    պատասխանի վերադարձ
+     */
     public void etveradardzum(double[] x1) {
         for (int i = 0; i < x1.length; i++) {
             System.out.println("x" + (i + 1) + " = " + x1[i]);

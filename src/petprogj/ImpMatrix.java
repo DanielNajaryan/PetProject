@@ -3,7 +3,9 @@ import com.google.gson.Gson;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
-
+/*
+մատրիցայի ներմուծման կլասը
+ */
 public class ImpMatrix {
     private double[][] arr;
     private int x,u,n,l;
@@ -13,6 +15,9 @@ public class ImpMatrix {
     public double[][] matrixint() {
         while (true) {
             System.out.print("Գրեք մատրիցի երկարությունը: ");
+            /*
+            մուտքային տվյալների ֆիլտրացում
+             */
             if (!scanner.hasNextInt()) {
                 System.out.println("Please enter a number!");
                 scanner.next();
@@ -26,6 +31,9 @@ public class ImpMatrix {
             break;
         }
         arr = new double[x][x + 1];
+        /*
+         *  տվյալների ներմուծում
+         */
         System.out.println("Գրեք մատրիցի մեջ եղած թվերը, յուրաքնչյուր թվի ներմուծումից հետո սեղմեք enter");
         for (int i = 0; i < x; i++) {
             for (int k = 0; k < x + 1; k++) {
@@ -46,6 +54,9 @@ public class ImpMatrix {
         System.out.println();
         return arr;
     }
+    /*
+    մասիվի տողի ամենամեծ թվի որոնում
+     */
     public void setMaxgcivra(){
         double[] maxgcivra =new double[x];
         for (int i = 0; i < x; i++) {
