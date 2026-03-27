@@ -10,7 +10,7 @@ public class jacobi_method {
     private int matricai_qanak;
     private int x, y, u;
     private double eps = 1e-6;
-    private int priblijenyaneriqanaky;
+    private int priblijenyaneriqanaky ;
     private boolean showSteps;
 /*
 մատրիցայի ներմուծումը՝ impmatrix-ում, որը վերագրում է main կլասում

@@ -9,7 +9,7 @@ public class gaus_method {
      */
     public void setMatrix(double[][] matrix) {
         this.a = matrix;
-        this.matricai_qanak = matrix.length;
+        this.matricai_qanak = matrix.length ;
     }
     /*
         գաուսի մեթոդով պատասխանի ստանալու համար կատարված գործողությունները և լոգիկա

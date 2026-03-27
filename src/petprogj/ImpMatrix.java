@@ -10,7 +10,7 @@ public class ImpMatrix {
     private double[][] arr;
     private int x,u,n,l;
     int [] maxtver;
-    Scanner scanner= new Scanner(System .in);
+    Scanner scanner= new Scanner(System .in );
     //   x-y et matricai chapna lenght and weight
     public double[][] matrixint() {
         while (true) {

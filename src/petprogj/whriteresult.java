@@ -3,7 +3,7 @@
  */
 package petprogj;
 import java.io.FileWriter;
-import java.io.IOException;
+import java.io.IOException ;
 public class whriteresult {
     public static void writeResultToFile(double[] result) {
         try (FileWriter writer = new FileWriter("result.txt ")) {

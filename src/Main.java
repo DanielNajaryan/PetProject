@@ -34,7 +34,7 @@ public class Main {
         if (inputType == 1) {
             matrix = imp.matrixint();
         } else {
-            List<double[][]> matrices = MatrixJson.readFromJson("matrix.json");
+            List<double[][]> matrices = MatrixJson.readFromJson("matrix.json ");
             matrix = matrices.get(0);
         }
         solveMatrix(matrix, scanner);
